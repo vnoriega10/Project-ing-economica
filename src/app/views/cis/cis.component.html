@@ -1,0 +1,38 @@
+<body>
+    <div class="login-card">
+        <h2>Calculadora Interés Simple</h2>
+        <h3>Ingresa los valores</h3>
+    
+        <form class="login-form">
+            <input type="number" placeholder="Capital" min="0"  [(ngModel)]="capitalSim" name="capitalSim">
+            <input type="number" placeholder="Tasa de intereses(%)" min="0" [(ngModel)]="interestSim" name="interestSim">
+            <div class="input-container" *ngIf="!mostrarInputsDate">
+                <input  placeholder="años" type="number" min="0"  [(ngModel)]="yearsSim" name="yearsSim">
+                <input  placeholder="mes" type="number" min="0" [(ngModel)]="monthsSim" name="monthsSim">
+                <input  placeholder="días" type="number" min="0" [(ngModel)]="daysSim" name="daysSim">
+            </div>
+
+            <label>
+            <input type="checkbox" (change)="toggleInputs()">
+            Activar calendario
+            </label>
+            
+            <div *ngIf="mostrarInputsDate" class="container-infi">
+                <label for="">Inicio</label> 
+                <label for="">Final</label>
+                <!-- Mostrar inputs tipo "date" -->
+                <div class="container-fecha">
+                    
+                    <input type="date">
+                    <input type="date">
+                </div>
+            </div>
+            <button type="button" (click)="calculateInterestSim()">CALCULAR</button>
+
+            <div class="container-total">
+                <input type="text" [value]="formattedTotalInterestSim">
+                <input type="text" [value]="formattedTotalSim">
+            </div>
+        </form>
+    </div>
+</body>

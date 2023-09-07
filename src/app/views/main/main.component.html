@@ -1,0 +1,39 @@
+<body class="bg-light">
+    <div class="row">
+        <div class="div-home">
+            <h1>Calculadora interés simple</h1>
+            <label class="fw-semibold">Capital inicial</label>
+            <div>
+                <input class = "input-capital" placeholder="Ingrese capital inicial" min="500" type="number"  [(ngModel)]="capital" >
+            </div>
+            <label class="fw-semibold">Tasa de interés(%)</label>
+            <div>
+                <input class="input-interes" placeholder="Ingrese tasa de interés" type="number"  [(ngModel)]="interestRate" >
+            </div>
+            <label class="fw-semibold">Años</label>
+            <label class="fw-semibold label-mes">Mes</label>
+            <label class="fw-semibold label-dias">Días</label>
+            <div class="input-container">
+                <input placeholder="años" type="number" min="0" max="20" [(ngModel)]="years" >
+                <input placeholder="mes" type="number" min="0" [(ngModel)]="months" >
+                <input placeholder="días" type="number" min="0" [(ngModel)]="days" >
+            </div>
+
+            <div class="text-center text-lg-center">
+                <button type="button" class="btn btn-danger btn-lg fw-semibold" (click)="calculateInterest()"
+                  style="padding-left: 2.5rem; padding-right: 2.5rem;">Calcular</button>
+            </div>
+            <label class="fw-semibold">Total Intereses</label>
+            <div>
+                <input class="input-total" type="text" readonly [value]="formattedTotalInterest">
+            </div>
+            <label class="fw-semibold">Total</label>
+            <div>
+                <input class="input-total" type="text" readonly [value]="formattedTotal">
+            </div>
+
+        </div>
+
+
+    </div>
+</body>

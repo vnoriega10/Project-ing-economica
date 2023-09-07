@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+
+.navlogo > a{
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #001829;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+.navlogo{
+    max-width: 100px;
+}
+
+.navlogo > a{
+    color: white;
+    font-weight: 550;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.nav-links > li > a{
+    position:relative;
+    padding-bottom: 0.75rem;
+    color: white;
+}
+
+.nav-links>li>a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #217dbb;
+    transition: all 0.3s ease;
+}
+
+.nav-links>li>a:hover::after{
+    width: 70%;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+
+header .content h2{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 4rem;
+
+}
+
+header .content p{
+    text-align: justify;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+
+.blur{
+    position:initial;
+    box-shadow: 70px 100px 1000px 65px #297EA6;
+}
+
+.content-2 .blur{
+    position:initial;
+    box-shadow: 1100px 100px 1000px 65px #297EA6;
+    
+}
+
+header .image{
+    position: relative;
+}
+
+
+header .image img{
+    max-width: 550px;
+    margin: auto;
+}
+
+section .image-2{
+    position: relative;
+}
+
+section .image-2 img{
+    height: 340px;
+    max-width: 450px;
+    margin: auto;
+}
+
+section{
+    position:relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.container-2{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+
+section .content-2 h2{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 4rem;
+}
+
+section .content-2 p{
+    text-align: justify;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.3rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}

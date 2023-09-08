@@ -1,9 +1,9 @@
 <body>
-    <div class="login-card">
+    <div class="calc-card">
         <h2>Calculadora Interés Simple</h2>
         <h3>Ingresa los valores</h3>
     
-        <form class="login-form">
+        <form class="calculadora-form">
             <input type="number" placeholder="Capital" min="0"  [(ngModel)]="capitalSim" name="capitalSim">
             <input type="number" placeholder="Tasa de intereses(%)" min="0" [(ngModel)]="interestSim" name="interestSim">
             <div class="input-container" *ngIf="!mostrarInputsDate">
@@ -30,8 +30,8 @@
             <button type="button" (click)="calculateInterestSim()">CALCULAR</button>
 
             <div class="container-total">
-                <input type="text" [value]="formattedTotalInterestSim">
-                <input type="text" [value]="formattedTotalSim">
+                <input type="number" [(ngModel)]="interesesSim" [value]="formattedTotalInterestSim" name="interesesSim">
+                <input type="text" name="valorfuturo" [value]="formattedTotalSim" readonly>
             </div>
         </form>
     </div>

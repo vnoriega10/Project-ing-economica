@@ -1,1 +1,42 @@
-<p>cic works!</p>
+<body>
+    <div class="calc-card">
+      <h2>Calculadora Interés Compuesto</h2>
+      <h3>Ingresa los valores</h3>
+  
+      <form class="calculadora-form">
+        <div class="container-input">
+            <label for="capitalSim">Capital</label>
+            <input type="number" placeholder="Capital Inicial" min="0" [(ngModel)]="capitalInicial" name="capitalInicial">
+        </div>
+        <div class="container-input">
+            <label for="capitalSim">Tasa de interés(%)</label>
+            <input type="number" placeholder="Tasa de Interés (%)" min="0" [(ngModel)]="tasaInteres" name="tasaInteres">
+        </div>
+        <div class="container-input">
+            <label for="capitalSim">Monto final</label>
+            <input type="number" placeholder="Monto Final" min="0" [(ngModel)]="montoFinal" name="montoFinal">
+        </div>
+        <div class="container-input">
+            <label for="capitalSim">Tiempo</label>
+            <input type="number" id="tiempo" placeholder="Tiempo" min="0" [(ngModel)]="tiempo" name="tiempo">
+        </div>
+        <label for="periodo">Selecciona el período:</label>
+        <select id="periodo" [(ngModel)]="periodo" name="periodo">
+          <option value="diario">Diario</option>
+          <option value="meses">Meses</option>
+          <option value="trimestral">Trimestral</option>
+          <option value="cuatrimestral">Cuatrimestral</option>
+          <option value="semestral">Semestral</option>
+          <option value="anual">Anual</option>
+        </select>
+  
+        <button type="button" (click)="calcularInteresCompuesto()">CALCULAR</button>
+  
+        <div class="container-total">
+            <label for="capitalSim">Total</label>
+          <input type="text" name="valorTotal" [value]="formattedTotalCom" readonly>
+      </div>
+      </form>
+    </div>
+  </body>
+  

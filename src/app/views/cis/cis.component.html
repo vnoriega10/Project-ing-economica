@@ -4,12 +4,23 @@
         <h3>Ingresa los valores</h3>
     
         <form class="calculadora-form">
-            <input type="number" placeholder="Capital" min="0"  [(ngModel)]="capitalSim" name="capitalSim">
+            <div class="container-input">
+                <label for="capitalSim">Capital</label>
+                <input type="number" placeholder="Capital" min="0"  [(ngModel)]="capitalSim" name="capitalSim">
+            </div>
+            <div class="container-input">
+                <label for="capitalSim">Tasa de interés(%)</label>
             <input type="number" placeholder="Tasa de intereses(%)" min="0" [(ngModel)]="interestSim" name="interestSim">
+            </div>
+            <div class="container-label" *ngIf="!mostrarInputsDate">
+                <label class="label-año" for="capitalSim">Año</label>
+                <label class="label-mes" for="capitalSim">Mes</label>
+                <label class="label-dia" for="capitalSim">Día</label>
+            </div>
             <div class="input-container" *ngIf="!mostrarInputsDate">
-                <input  placeholder="años" type="number" min="0"  [(ngModel)]="yearsSim" name="yearsSim">
-                <input  placeholder="mes" type="number" min="0" [(ngModel)]="monthsSim" name="monthsSim">
-                <input  placeholder="días" type="number" min="0" [(ngModel)]="daysSim" name="daysSim">
+                <input  type="number"   [(ngModel)]="yearsSim" name="yearsSim">
+                <input  type="number" [(ngModel)]="monthsSim" name="monthsSim">
+                <input  type="number" [(ngModel)]="daysSim" name="daysSim">
             </div>
 
             <label>
@@ -18,21 +29,26 @@
             </label>
             
             <div *ngIf="mostrarInputsDate" class="container-infi">
-                <label for="">Inicio</label> 
-                <label for="">Final</label>
+                <label for="inicio">Inicio</label> 
+                <label for="final">Final</label>
                 <!-- Mostrar inputs tipo "date" -->
                 <div class="container-fecha">
                     
-                    <input type="date">
-                    <input type="date">
+                    <input type="date" [(ngModel)]="inicio" name="inicio">
+                    <input type="date" [(ngModel)]="final" name="final">
                 </div>
             </div>
             <button type="button" (click)="calculateInterestSim()">CALCULAR</button>
 
-            <div class="container-total">
-                <input type="number" [(ngModel)]="interesesSim" [value]="formattedTotalInterestSim" name="interesesSim">
+                <div class="container-input">
+                    <label for="capitalSim">Total intereses</label>
+                    <input type="number" [(ngModel)]="interesesSim" [value]="formattedTotalInterestSim" name="interesesSim">
+                </div>
+                <div class="container-input">
+                    <label for="capitalSim">Valor futuro</label>
                 <input type="text" name="valorfuturo" [value]="formattedTotalSim" readonly>
-            </div>
+                </div>
+            
         </form>
     </div>
 </body>

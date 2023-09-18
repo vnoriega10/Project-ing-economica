@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+html, body, .wrapper{
+    height: 100%;
+}
+.container-input > label{
+    display: flex;
+    text-align: start;
+    margin: -5px 0 2px 12px;
+
+}
+
+body{
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    background-image:url("src/assets/bg-circle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Ubuntu";
+    color: #000;
+    animation: rotate 4s infinite alternate linear;
+}
+
+.calc-card{
+    position: relative;
+    z-index: 3;
+    width: 320px;
+    margin: 0 auto;
+    padding: 15px 30px 44px;
+    border-radius: 1.25rem;
+    background: white;
+    text-align: center;
+    height: 570px;
+}
+
+.calc-card > h2{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 3px;
+}
+
+.calc-card > h3{
+    color: rgba(0, 0, 0, 0.575);
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.input-container > input{
+    width: 62px;
+    height: 25px;
+    border-radius: 1.25rem;
+    border: 2px solid #bebebe;
+    font-size: 15px;
+    padding: 0px 5.5px;
+    transition: all 0.375s;
+    font-family: inherit;
+    margin: 0 10px 0 0px;
+}
+
+.input-container >input:hover{
+    border: 2px solid #10449A;
+}
+.calculadora-form{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+
+.container-input > input{
+    width: 100%;
+    height: 30px;
+
+}
+
+.calculadora-form > button{
+    width: 100%;
+    height: 45px;
+
+}
+
+.container-input > input{
+    border: 2px solid #bebebe;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    transition: all 0.375s;
+}
+
+.container-input > input:hover{
+    border: 2px solid #10449A;
+}
+
+.calculadora-form > button{
+    cursor: pointer;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    background: #10449A;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}
+
+.calculadora-form > button:hover{
+    background: #216ce7;
+}
+
+.calculadora-form > label{
+    text-align: start;
+    color: rgba(0, 0, 0, 0.575);
+    font-size: 1rem;
+    margin-bottom: -10px;
+    margin-top: -5px;
+}
+
+.calculadora-form > select{
+    width: 100%;
+    border: 2px solid #bebebe;
+    border-radius: 1.25rem;
+}
+
+.calculadora-form > select:hover{
+    border: 2px solid #10449A;
+
+}
+
+@keyframes rotate{
+    100%{
+        background-position: 15% 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 0;
+    }
+    .calc-card {
+        margin: 0;
+        width: 90%; /* Ajusta el ancho del formulario para dispositivos móviles */
+    }
+    .calculadora-form > input, .calculadora-form > button {
+        height: 40px; /* Ajusta la altura de los elementos de entrada y botón */
+    }
+    .calculadora-form > h2 {
+        font-size: 24px; /* Reduce el tamaño del encabezado para dispositivos móviles */
+    }
+}
+
+
+.container-total > input {
+    margin-top: -2px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    border-radius: 1rem;
+    border: 2px solid #bebebe;
+    width: 100%;
+    height: 35px;
+}
+
+.container-total > label{
+    display: flex;
+    text-align: start;
+    margin: -7px 0 2px 12px;
+
+}

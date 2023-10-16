@@ -1,0 +1,69 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+<body>
+  <nav>
+    <div class="navlogo">
+      <a href="#">
+        Ingenieria Económica
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" routerLink="/calculadora-Francesa">Francés</a></li>
+      <li><a href="#" routerLink="/calculadora-Alemana">Alemán</a></li>
+      <li><a href="#" routerLink="/calculadora-Americana">Americano</a></li>
+      
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="abs-center"><h3>Sistema Francés</h3>
+      <form class="border p-4 form">
+        <div class="mb-3">
+          <label for="exampleInput" class="form-label">Cantidad de prestamo</label>
+          <input type="number" class="form-control" id="exampleInput" aria-describedby="capital" [(ngModel)]="cantidad" name="cantidad">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Tasa de interes</label>
+          <input type="number" class="form-control" id="exampleInput1" [(ngModel)]="interes" name="interes">
+        </div>
+        <div>
+          <label for="periodo" class="form-label">Periodo</label>
+          <input type="number" class="form-control" id="periodo" aria-describedby="periodo" [(ngModel)]="periodo" name="periodo">
+        </div>
+        <div>
+          <select class="form-select" id="periodoType" [(ngModel)]="periodoType" name="periodoType">
+            <option value="mensual">Mensual</option>
+            <option value="anual">Anual</option>
+          </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" style="margin: 10px" (click)="onDatos()">Calcular</button>
+        <button type="submit" class="btn btn-primary" (click)="limpiar()">Limpiar</button>
+      </form>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Periodos de pago</th>
+            <th scope="col">Cuota</th>
+            <th scope="col">Interes por Cuota</th>
+            <th scope="col">Amortizacion</th>
+            <th scope="col">Saldo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let item of datos; index as i">
+            <th scope="row">{{i}}</th>
+            <td>{{item.mensualidad | currency:'USD'}}</td>
+            <td>{{item.interes | currency:'USD'}}</td>
+            <td>{{item.amortizacion | currency:'USD'}}</td>
+            <td>{{item.saldo | currency:'USD'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="copyright">
+    Todos los derechos de autor reservados © 2023  
+  </div>
+</body>

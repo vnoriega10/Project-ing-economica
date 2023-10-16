@@ -7,6 +7,10 @@ import { MainComponent } from './views/main/main.component';
 import { FormsModule } from '@angular/forms';
 import { CisComponent } from './views/cis/cis.component';
 import { CicComponent } from './views/cic/cic.component';
+import { AmortizacionComponent } from './views/Amortizacion/amortizacion.component';
+import { AAlemanComponent } from './views/Amortizacion/Alemana/AAleman.component';
+import { AAmericanaComponent } from './views/Amortizacion/Americana/AAmericana.component';
+import { AFrancesaComponent } from './views/Amortizacion/Francesa/AFrancesa.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { CicComponent } from './views/cic/cic.component';
     HomeComponent,
     MainComponent,
     CisComponent,
-    CicComponent
+    CicComponent,
+    AmortizacionComponent,
+    AAlemanComponent,
+    AAmericanaComponent,
+    AFrancesaComponent
   ],
   imports: [
     BrowserModule,

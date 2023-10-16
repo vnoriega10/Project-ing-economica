@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+.navlogo>a {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+#periodoType {
+    margin-top: -29px;
+    margin-left: 140px;
+    width: 120px;
+    /* Ajusta el ancho según tus preferencias */
+}
+
+/* Ajusta el ancho del input de período */
+.form-control#periodo {
+    width: 120px;
+    /* Ajusta el ancho según tus preferencias */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001829;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+.navlogo {
+    max-width: 100px;
+}
+
+.navlogo>a {
+    color: white;
+    font-weight: 550;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.nav-links>li>a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: white;
+}
+
+.nav-links>li>a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #217dbb;
+    transition: all 0.3s ease;
+}
+
+.nav-links>li>a:hover::after {
+    width: 70%;
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.abs-center {
+    text-align: left;
+    margin: 0 auto;
+}
+
+.form-label {
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Estilos para los inputs */
+.form-control {
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+
+.btn {
+    padding: 10px 30px;
+    font-family: 'Arial', sans-serif; /* Aplica la misma fuente elegante a los botones */
+    font-size: 16px; /* Ajusta el tamaño de fuente según tus preferencias */
+    color: white;
+    background: linear-gradient(to bottom, #007BFF, #0056b3); /* Degradado de color */
+    border: none;
+    border-radius: 120px;
+    cursor: pointer;
+    transition: background 0.3s; /* Transición suave al pasar el cursor */
+  }
+  
+  .btn:hover {
+    background: linear-gradient(to bottom, #0056b3, #7700ff); /* Degradado inverso al pasar el cursor */
+  }
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las celdas de encabezado */
+.table th {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    max-width: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Estilos para las celdas de datos */
+.table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+    width: auto;
+}
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.3rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}

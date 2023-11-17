@@ -37,7 +37,7 @@ body{
     border-radius: 1.25rem;
     background: white;
     text-align: center;
-    height: 560px;
+    height: 610px;
 }
 
 .calc-card > h2{
@@ -205,4 +205,16 @@ body{
     margin-right: 20px;
     padding:0 10px;
     color: #000;
+}
+
+.calc-card > .button-regresar{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 0px;
+
+}
+
+.calc-card > .button-regresar > button {
+    font-size: 25px;
+    color: #10449A;
 }

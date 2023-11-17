@@ -7,6 +7,7 @@ import { AmortizacionComponent } from './views/Amortizacion/amortizacion.compone
 import { AAlemanComponent } from './views/Amortizacion/Alemana/AAleman.component';
 import { AAmericanaComponent } from './views/Amortizacion/Americana/AAmericana.component';
 import { AFrancesaComponent } from './views/Amortizacion/Francesa/AFrancesa.component';
+import { TirComponent } from './views/tir/tir.component';
 
 const routes: Routes = [
   { path:'' , redirectTo:'home' , pathMatch:'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'calculadora-Alemana', component: AAlemanComponent},
   { path: 'calculadora-Americana', component: AAmericanaComponent},
   { path: 'calculadora-Francesa', component: AFrancesaComponent},
+  { path: 'calculadora-tir', component: TirComponent},
   { path: 'home', component : HomeComponent}
 ];
 

@@ -42,6 +42,9 @@ export class AAlemanComponent implements OnInit {
     if (this.periodoType === 'anual') {
       i /= 12; // Dividir la tasa de interés entre 12
       n *= 12;  // Multiplicar el período por 12
+    }else if (this.periodoType === 'trimestral') {
+      i /= 3; // Dividir la tasa de interés entre 12
+      n *= 3;  // Multiplicar el período por 12
     }
     const Aconstante: number = p / n;
     this.dato = this.datoEmpty();

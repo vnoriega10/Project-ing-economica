@@ -11,6 +11,7 @@ import { AmortizacionComponent } from './views/Amortizacion/amortizacion.compone
 import { AAlemanComponent } from './views/Amortizacion/Alemana/AAleman.component';
 import { AAmericanaComponent } from './views/Amortizacion/Americana/AAmericana.component';
 import { AFrancesaComponent } from './views/Amortizacion/Francesa/AFrancesa.component';
+import { TirComponent } from './views/tir/tir.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AFrancesaComponent } from './views/Amortizacion/Francesa/AFrancesa.comp
     AmortizacionComponent,
     AAlemanComponent,
     AAmericanaComponent,
-    AFrancesaComponent
+    AFrancesaComponent,
+    TirComponent
   ],
   imports: [
     BrowserModule,
